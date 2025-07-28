@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Network Scrambler
+Comment=Network condition emulation tool
+Exec=appNetworkScrambler
+Icon=network-wired
+Terminal=false
+Categories=Network;System;
+Keywords=network;emulation;tc;traffic;control;

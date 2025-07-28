@@ -1,0 +1,14 @@
+Source: networkscrambler
+Section: net
+Priority: optional
+Maintainer: Samuel Esho samuel.esho@protonmail.com
+Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, qt6-declarative-dev
+Standards-Version: 4.6.0
+
+Package: networkscrambler
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, iproute2, policykit-1
+Description: Network condition emulation tool
+ NetworkScrambler allows you to simulate various network conditions
+ such as packet loss, latency, and bandwidth limitations using
+ the tc (traffic control) command.

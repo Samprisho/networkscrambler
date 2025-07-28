@@ -1,0 +1,18 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+    configure)
+        # Make sure the helper script is executable
+        chmod +x /usr/libexec/networkscrambler/network-helper.sh
+        
+        # Update PolicyKit cache
+        if [ -x /usr/bin/update-desktop-database ]; then
+            update-desktop-database -q
+        fi
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
