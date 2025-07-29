@@ -102,7 +102,7 @@ bool NetworkEmulation::resetNetworkEmulation(const QString& device)
 void NetworkEmulation::invokeExecuteNetEm(
   QString device,
   float delay, float delayVar, float delayVarPct,
-  float pcktLoss, float pcktLossVar, float pcktLossPct)
+  float pcktLoss, float pcktLossVar)
 {
   NetworkEmulationConditions conditions;
   conditions.delayBase = delay;
@@ -110,11 +110,10 @@ void NetworkEmulation::invokeExecuteNetEm(
   conditions.delayVariationPercentage = delayVarPct;
   conditions.packetLossBase = pcktLoss;
   conditions.packetLossVariation = pcktLossVar;
-  conditions.packetLossPercentage = pcktLossPct;
 
   qDebug() << "Applying network emulation to device:" << device;
   qDebug() << "Delay:" << delay << "±" << delayVar << "ms (" << delayVarPct << "%)";
-  qDebug() << "Packet Loss:" << pcktLoss << "±" << pcktLossVar << "% (" << pcktLossPct << "%)";
+  qDebug() << "Packet Loss:" << pcktLoss << "±" << pcktLossVar << "%";
 
   executeNetworkEmulationCommand(device, conditions);
 }

@@ -30,8 +30,7 @@ class NetworkEmulation : public QObject
     float delayVar,
     float delayVarPct,
     float pcktLoss,
-    float pcktLossVar,
-    float pcktLossPct
+    float pcktLossVar
     );
 
   Q_INVOKABLE void invokeResetNetEm(QString device);

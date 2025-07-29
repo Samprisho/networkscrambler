@@ -16,7 +16,6 @@ ColumnLayout {
   property string itemName: "value"
   property alias valueText: valueInput.text
   property alias variationText: variationInput.text
-  property alias percentageText: percentageInput.text
 
   width: 400
 
@@ -63,33 +62,6 @@ ColumnLayout {
       id: variationInput
       width: 50
       text: "5"
-      horizontalAlignment: Text.AlignHCenter
-      placeholderText: qsTr("Text Field")
-      font.weight: Font.Medium
-      echoMode: TextInput.Normal
-      validator: DoubleValidator {
-        bottom: 0
-        top: 100
-        decimals: 2
-      }
-    }
-  }
-
-  RowLayout {
-    id: percentageRow
-    Text {
-      id: percentageLabel
-      color: "#ffffff"
-      text: itemName + " percentage"
-      horizontalAlignment: Text.AlignLeft
-      font.pointSize: 12
-      Layout.fillWidth: true
-    }
-
-    TextField {
-      id: percentageInput
-      width: 50
-      text: "10"
       horizontalAlignment: Text.AlignHCenter
       placeholderText: qsTr("Text Field")
       font.weight: Font.Medium

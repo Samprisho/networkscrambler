@@ -37,8 +37,6 @@ Window {
                                           packetLossSection.getPacketLossValue(
                                             )), parseFloat(
                                           packetLossSection.getPacketLossVariation(
-                                            )), parseFloat(
-                                          packetLossSection.getPacketLossPercentage(
                                             )));
   }
 
@@ -121,9 +119,6 @@ Window {
         }
         function getPacketLossVariation() {
           return children[1].children[1].text;
-        }
-        function getPacketLossPercentage() {
-          return children[2].children[1].text;
         }
       }
 

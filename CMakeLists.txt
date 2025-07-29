@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(NetworkScrambler VERSION 0.1 LANGUAGES CXX)
+project(NetworkScrambler VERSION 0.2 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -15,7 +15,7 @@ qt_add_executable(appNetworkScrambler
 
 qt_add_qml_module(appNetworkScrambler
     URI NetworkScrambler
-    VERSION 1.0
+    VERSION 0.2
     QML_FILES
         Main.qml
         InputSection.qml
